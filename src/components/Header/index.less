@@ -1,0 +1,64 @@
+.header {
+  height: 70px;
+  background-color: #242424;
+  border-bottom: 1px solid #000;
+  color: #fff;
+  display: flex;
+  .top {
+    position: relative;
+    .logo {
+      width: 176px;
+      height: 70px;
+      display: inline-block;
+      div {
+        background: url('../../assets/img/topbar.png') no-repeat 0 0;
+        display: block;
+        width: 156px;
+        height: 70px;
+        padding-right: 20px;
+      }
+    }
+    .ulHeader {
+      position: relative;
+      top: -29px;
+      display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      li {
+        line-height: 70px;
+        position: relative;
+        a {
+          padding: 0 19px;
+          display: inline-block;
+        }
+        a:hover {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.hot {
+  position: absolute;
+  left: 100px;
+  width: 28px;
+  height: 19px;
+  top: 21px;
+  display: block;
+  background: url(../../assets/img/topbar.png) no-repeat -190px 0;
+}
+
+.behind {
+  position: relative;
+  display: inline-block;
+  .search {
+    display: inline-block;
+  }
+  .createAuthor {
+    display: inline-block;
+  }
+  .login {
+    display: inline-block;
+  }
+}

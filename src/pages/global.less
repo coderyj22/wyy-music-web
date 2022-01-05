@@ -1,0 +1,87 @@
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrap,
+.wrap-v1 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.wrap-v2 {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.sprite-topbar {
+  background: url('../assets/img/topbar.png') no-repeat 0 0;
+}
+
+.sprite-footer {
+  background: url('../assets/img/foot.png') no-repeat 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 0px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.ant-slider {
+  margin: 0;
+}
+
+.play-progress {
+  .ant-slider-handle {
+    width: 22px;
+    height: 24px;
+    margin-top: -9px;
+    border: none;
+    background: url('../assets/img/iconall.png') 0 -250px !important;
+    background-position: 0 -250px;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-position: 0 -280px !important;
+    }
+  }
+  .ant-slider-track {
+    background-color: red;
+  }
+  .ant-slider {
+    &:hover {
+      .ant-slider-track {
+        background-color: red;
+      }
+    }
+  }
+}
+
+// .ant-slider-handle {
+//   background: url('./assets/img/play_bar.png') no-repeat 0 -250px;
+// }
