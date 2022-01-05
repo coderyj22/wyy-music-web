@@ -20,7 +20,7 @@
     }
     .ulHeader {
       position: relative;
-      top: -29px;
+      top: -30px;
       display: inline-block;
       color: #fff;
       font-size: 14px;
@@ -52,13 +52,60 @@
 .behind {
   position: relative;
   display: inline-block;
+  top: -30px;
+  left: 50px;
   .search {
     display: inline-block;
+    position: relative;
+    .searchIcon {
+      position: absolute;
+      width: 25px;
+      height: 30px;
+      background: url(../../assets/img/topbar.png) no-repeat 0 -99px;
+    }
+    .input {
+      width: 158px;
+      height: 32px;
+      border: 1px solid #f2f2f2;
+      border-radius: 20px;
+      padding-left: 30px;
+      font-size: 12px;
+      outline: none;
+      background: #fff;
+      color: #333;
+    }
   }
   .createAuthor {
     display: inline-block;
+    border: 1px solid #4f4f4f;
+    color: #ccc;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin: 0 10px;
+  }
+  .createAuthor:hover {
+    cursor: pointer;
+    border-color: #ccc;
+    color: #fff;
   }
   .login {
     display: inline-block;
   }
+}
+
+.current {
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  background: url(../../assets/img/topbar.png) no-repeat -105px -70px;
+  background-size: 120px auto;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.hBottom {
+  background-color: #c20c0c;
+  height: 5px;
 }

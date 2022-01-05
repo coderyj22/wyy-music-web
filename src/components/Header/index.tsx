@@ -3,14 +3,6 @@ import { history, Link } from 'umi';
 import style from './index.less';
 
 export default function Header() {
-  // const nav2 = [
-  //   { title: '推荐', router: '' },
-  //   { title: '排行榜', router: '/discover/toplist' },
-  //   { title: '歌单', router: '/discover/playlist' },
-  //   { title: '主播电台', router: '/discover/djradio' },
-  //   { title: '歌手', router: '/discover/artist' },
-  //   { title: '新碟上架', router: '/discover/album' },
-  // ];
   const nav1 = [
     { title: '发现音乐', route: '/discover' },
     { title: '我的音乐', route: '/my' },
@@ -45,7 +37,8 @@ export default function Header() {
                           backgroundColor: currentIndex == index ? '#000' : '',
                         }}
                       >
-                        {item.title}
+                        <span>{item.title}</span>
+                        <span className={currentIndex == index ? style.current :""}></span>
                       </a>
                       {index == 5 ? <span className={style.hot}></span> : ''}
                     </li>
@@ -60,14 +53,19 @@ export default function Header() {
             })}
           </ul>
           <div className={style.behind}>
-            <div className={style.search}>搜索</div>
+            <div className={style.search}>
+              <div className={style.searchIcon}></div>
+              <input className={style.input} type="text" />
+            </div>
             <div className={style.createAuthor}>
               <div>创作者中心</div>
             </div>
-            <div className={style.login}>登陆</div>
+            <a className={style.login}>登陆</a>
           </div>
         </div>
       </div>
+      {/* 底部红色线条 */}
+      <div className={style.hBottom}></div>
     </div>
   );
 }
