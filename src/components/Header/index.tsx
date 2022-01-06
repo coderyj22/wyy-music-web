@@ -11,8 +11,17 @@ export default function Header() {
     { title: '音乐人', link: 'https://music.163.com/st/musician' },
     { title: '下载客户端', route: '/download' },
   ];
+  const nav2 = [
+    { title: '推荐', router: '/discover' },
+    { title: '排行榜', router: '/discover/toplist' },
+    { title: '歌单', router: '/discover/playlist' },
+    { title: '主播电台', router: '/discover/djradio' },
+    { title: '歌手', router: '/discover/artist' },
+    { title: '新碟上架', router: '/discover/album' },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(0);
   return (
     <div>
       <div className={style.header}>
@@ -30,6 +39,7 @@ export default function Header() {
                       onClick={() => {
                         setCurrentIndex(index);
                         history.push(item.route);
+                        index != 0 ? setNextIndex(0) : '';
                       }}
                     >
                       <a
@@ -38,7 +48,9 @@ export default function Header() {
                         }}
                       >
                         <span>{item.title}</span>
-                        <span className={currentIndex == index ? style.current :""}></span>
+                        <span
+                          className={currentIndex == index ? style.current : ''}
+                        ></span>
                       </a>
                       {index == 5 ? <span className={style.hot}></span> : ''}
                     </li>
@@ -66,6 +78,32 @@ export default function Header() {
       </div>
       {/* 底部红色线条 */}
       <div className={style.hBottom}></div>
+      {currentIndex == 0 && (
+        <div className={style.navTop}>
+          <div>
+            <ul>
+              {nav2.map((item, index) => {
+                return (
+                  <li>
+                    <span
+                      style={{
+                        backgroundColor: nextIndex == index ? '#9b0909' : '',
+                      }}
+                      onClick={() => {
+                        setNextIndex(index);
+                        history.push(item.router);
+                      }}
+                    >
+                      {item.title}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      )}
+      <h1 className={style.title}>发现音乐</h1>
     </div>
   );
 }

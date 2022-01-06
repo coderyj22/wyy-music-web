@@ -9,6 +9,7 @@ export default defineConfig({
       path: '/',
       component: '@/pages/index.tsx',
       routes: [
+        { path: '/', component: '@/pages/discover/discover' },
         { path: '/discover', component: '@/pages/discover/discover' },
         { path: '/my', component: '@/pages/my/my' },
         { path: '/friend', component: '@/pages/friend/friend' },
